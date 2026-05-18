@@ -8,6 +8,11 @@ export {
   type SuggestUpdateBannerProps,
 } from './components/SuggestUpdateBanner';
 export {
+  UpdateGate,
+  type UpdateGateProps,
+  type UpdateThresholds,
+} from './components/UpdateGate';
+export {
   UpdateGateThemeProvider,
   lightTheme,
   darkTheme,
