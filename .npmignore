@@ -1,0 +1,20 @@
+# Everything that should NOT ship in the npm tarball.
+# `files` in package.json is the allowlist; this is a belt-and-braces denylist.
+
+__tests__/
+example/
+docs/
+coverage/
+.github/
+.gitignore
+.eslintrc*
+.prettierrc*
+jest.config.js
+babel.config.js
+tsconfig.json
+tsconfig.build.json
+*.log
+.DS_Store
+
+# Source maps — not useful to consumers
+**/*.map
