@@ -31,7 +31,7 @@ inAppUpdates.checkNeedsUpdate().then(result => {
 ## After
 
 ```tsx
-import { useUpdate, ForceUpdateModal, configureUpdateGate } from 'react-native-update-gate';
+import { useUpdate, ForceUpdateModal, configureUpdateGate } from '@zethictech/react-native-update-gate';
 import DeviceInfo from 'react-native-device-info';
 
 configureUpdateGate({

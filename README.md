@@ -1,14 +1,14 @@
-# react-native-update-gate
+# @zethictech/react-native-update-gate
 
 > Beautiful, type-safe, server-driven force/suggest update gate for React Native apps.
 
-[![npm](https://img.shields.io/npm/v/react-native-update-gate.svg)](https://www.npmjs.com/package/react-native-update-gate)
+[![npm](https://img.shields.io/npm/v/@zethictech/react-native-update-gate.svg)](https://www.npmjs.com/package/@zethictech/react-native-update-gate)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Force users off broken old builds with **Google Play's native immediate flow** on Android, and a **polished animated modal** on iOS. Drive version thresholds from your own server, not from store metadata. Ship in 15 minutes.
 
 ```tsx
-import { useUpdate, ForceUpdateModal, SuggestUpdateBanner, configureUpdateGate } from 'react-native-update-gate';
+import { useUpdate, ForceUpdateModal, SuggestUpdateBanner, configureUpdateGate } from '@zethictech/react-native-update-gate';
 import DeviceInfo from 'react-native-device-info';
 
 configureUpdateGate({
@@ -39,7 +39,7 @@ That's the whole integration.
 
 ## Why another in-app-updates library
 
-| | `react-native-update-gate` | `sp-react-native-in-app-updates` | `react-native-version-check` | `forceupdate-reactnative` |
+| | `@zethictech/react-native-update-gate` | `sp-react-native-in-app-updates` | `react-native-version-check` | `forceupdate-reactnative` |
 |---|---|---|---|---|
 | Modern Play App Update SDK 2.x | ✅ | ⚠️ legacy Play Core | ❌ | ❌ |
 | TypeScript-first (strict types shipped) | ✅ | ⚠️ partial | ❌ | ⚠️ |
@@ -58,9 +58,9 @@ That's the whole integration.
 ## Installation
 
 ```sh
-yarn add react-native-update-gate compare-versions
+yarn add @zethictech/react-native-update-gate compare-versions
 # or
-npm install react-native-update-gate compare-versions
+npm install @zethictech/react-native-update-gate compare-versions
 ```
 
 Then on iOS:
@@ -199,7 +199,7 @@ Two ways to customise.
 **Globally via context:**
 
 ```tsx
-import { UpdateGateThemeProvider, lightTheme } from 'react-native-update-gate';
+import { UpdateGateThemeProvider, lightTheme } from '@zethictech/react-native-update-gate';
 
 <UpdateGateThemeProvider value={{ ...lightTheme, primary: '#FF6B6B', radius: 24 }}>
   <App />

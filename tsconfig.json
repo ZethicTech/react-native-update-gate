@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-update-gate": ["./src/index"]
+      "@zethictech/react-native-update-gate": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

@@ -6,7 +6,7 @@ import {
   configureUpdateGate,
   evaluateUpdate,
   type Verdict,
-} from 'react-native-update-gate';
+} from '@zethictech/react-native-update-gate';
 
 configureUpdateGate({
   androidPackageName: 'com.example.demo',

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] — 2026-05-18
+
+### Changed
+- **Package renamed to `@zethictech/react-native-update-gate`** (scoped under
+  the Zethic Tech org on npm). Update consumer imports:
+  ```diff
+  - import { useUpdate } from 'react-native-update-gate';
+  + import { useUpdate } from '@zethictech/react-native-update-gate';
+  ```
+- Release workflow now uses npm **Trusted Publishing** (OIDC) — no more
+  `NPM_TOKEN` secret. Requires npm ≥ 11.5.1 (workflow upgrades npm before publish).
+
 ## [0.2.0] — 2026-05-18
 
 ### Added
