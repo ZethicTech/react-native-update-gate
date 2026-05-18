@@ -92,4 +92,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript types shipped (`strict`, `noUncheckedIndexedAccess`).
 - ESM + CommonJS dual build via `react-native-builder-bob`.
 - Jest test suite covering verdict matrix, config, and hook.
-
