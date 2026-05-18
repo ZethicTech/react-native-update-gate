@@ -300,4 +300,4 @@ Contributions welcome! Bug reports, feature requests, and PRs all appreciated.
 
 ## License
 
-MIT © SABA Hospitality
+MIT © Zethic Tech

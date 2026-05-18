@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] — 2026-05-18
+
+### Changed
+- Authorship and copyright attribution updated from "SABA Hospitality" to
+  **Zethic Tech** (the package maintainer). The package is a standalone
+  open-source library — SABA Hospitality is one of its consumers, not the
+  author. Affects `LICENSE`, `README.md` footer, and `package.json` `author` field.
+
 ## [0.2.1] — 2026-05-18
 
 ### Changed

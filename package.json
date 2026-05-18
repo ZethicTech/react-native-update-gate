@@ -1,6 +1,6 @@
 {
   "name": "@zethictech/react-native-update-gate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Beautiful, type-safe, server-driven force/suggest update gate for React Native. Uses Google Play's native immediate flow on Android; ships a polished animated modal on iOS.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -34,7 +34,7 @@
     "type": "git",
     "url": "git+https://github.com/ZethicTech/react-native-update-gate.git"
   },
-  "author": "SABA Hospitality",
+  "author": "Zethic Tech",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ZethicTech/react-native-update-gate/issues"
