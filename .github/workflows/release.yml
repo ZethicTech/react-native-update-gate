@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -11,16 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      # id-token: write is the magic — lets GitHub Actions mint an OIDC token
+      # that npm exchanges for short-lived publish credentials. No NPM_TOKEN.
       id-token: write
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
+
+      # Trusted Publishing requires npm >= 11.5.1. Node 22 ships with npm 10.x.
+      - name: Upgrade npm
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -34,7 +42,5 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Publish to npm
+      - name: Publish to npm (Trusted Publishing + provenance)
         run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
