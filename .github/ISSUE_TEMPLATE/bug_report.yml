@@ -1,0 +1,86 @@
+name: Bug report
+description: Something isn't working as documented.
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. Please complete the
+        sections below so we can reproduce and fix the issue quickly.
+
+        For usage questions, please use
+        [Discussions](https://github.com/ZethicTech/react-native-update-gate/discussions)
+        instead.
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      description: Output of `npm ls @zethictech/react-native-update-gate`
+      placeholder: "0.2.5"
+    validations:
+      required: true
+
+  - type: input
+    id: rn-version
+    attributes:
+      label: React Native version
+      placeholder: "0.83.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - iOS
+        - Android
+        - Both
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / OS
+      placeholder: "iPhone 15 Pro / iOS 18.4 (or Pixel 8 / Android 15)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the actual behaviour. Include any error messages or stack traces.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: |
+        Steps to reproduce, ideally with a code snippet.
+        A link to a GitHub repo with the smallest possible failing case is the best.
+      placeholder: |
+        1. Install the package
+        2. Set up `useUpdate` with these props: ...
+        3. Observe that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Anything else relevant — screenshots, logs, related issues.

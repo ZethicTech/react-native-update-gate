@@ -290,11 +290,17 @@ See [`docs/architecture.md`](docs/architecture.md) for design decisions:
 
 ## Contributing
 
-Contributions welcome! Bug reports, feature requests, and PRs all appreciated.
+Contributions are welcome — bug reports, feature requests, documentation fixes,
+and code PRs all appreciated.
 
-1. `git clone` + `yarn install`.
-2. `yarn typecheck && yarn test` — keep green.
-3. `cd example && yarn install` and run the demo app to validate visual changes.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the full guide:
+local setup, branch/commit conventions, the PR flow, and how releases are cut.
+
+This project follows a [Code of Conduct](./CODE_OF_CONDUCT.md).
+By participating, you agree to abide by its terms.
+
+For security vulnerabilities, **do not open a public issue** —
+follow [`SECURITY.md`](./SECURITY.md) to report privately.
 
 ---
 

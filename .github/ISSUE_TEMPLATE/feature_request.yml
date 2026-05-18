@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest a new capability or improvement.
+title: "[feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for thinking about how the package could be better.
+        Please describe the problem you want to solve before suggesting the
+        solution — sometimes there's an existing way, or a better solution
+        emerges from the discussion.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem you're trying to solve?
+      description: Describe the use case in your own words. What are you trying to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What's your proposed solution?
+      description: How would you like the API or behaviour to work? Code snippets welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: What workarounds or alternative solutions did you think about, and why didn't they fit?
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: Where does this feature belong?
+      multiple: true
+      options:
+        - JS / TypeScript API
+        - Android native module
+        - iOS UI (force modal / suggest banner)
+        - Theming
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
