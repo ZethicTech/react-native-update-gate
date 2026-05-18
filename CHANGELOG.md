@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-05-18
+
+### Added
+- **New `<UpdateGate>` component** — unified high-level API that internally
+  uses `useUpdate` and renders the right child (`ForceUpdateModal` or
+  `SuggestUpdateBanner`) based on the verdict. Simplifies the most common
+  integration from ~6 lines to one component:
+  ```tsx
+  <UpdateGate
+    installed={DeviceInfo.getVersion()}
+    thresholds={{
+      force: serverConfig.min_app_version,
+      suggest: serverConfig.latest_app_version,
+    }}
+    accent="#FF6B6B"
+  />
+  ```
+- `thresholds` prop groups `force` (blocks below this version) and `suggest`
+  (gently prompts below this version) for unambiguous intent.
+- `force` and `suggest` prop bags pass through customisation to the underlying
+  modal / banner — e.g. `force={{ title, message, buttonText }}`.
+- `showVersionDiff` prop — auto-generates the `vX → vY` pill on the modal.
+- New `UpdateThresholds` type exported for typed config objects.
+
+### Compatibility
+- **No breaking changes**. `ForceUpdateModal`, `SuggestUpdateBanner`, `useUpdate`,
+  and all existing exports continue to work unchanged for consumers who need
+  per-component control (separate themes, custom positioning, etc.).
+
 ## [0.2.2] — 2026-05-18
 
 ### Changed

@@ -13,7 +13,7 @@
 Force users off broken old builds with **Google Play's native immediate flow** on Android, and a **polished animated modal** on iOS. Drive version thresholds from your own server, not from store metadata. Ship in 15 minutes.
 
 ```tsx
-import { useUpdate, ForceUpdateModal, SuggestUpdateBanner, configureUpdateGate } from '@zethictech/react-native-update-gate';
+import { UpdateGate, configureUpdateGate } from '@zethictech/react-native-update-gate';
 import DeviceInfo from 'react-native-device-info';
 
 configureUpdateGate({
@@ -22,23 +22,28 @@ configureUpdateGate({
 });
 
 function App() {
-  const { verdict } = useUpdate({
-    installed: DeviceInfo.getVersion(),
-    minRequired: serverConfig.min_app_version,
-    latestAvailable: serverConfig.latest_app_version,
-  });
-
   return (
     <>
       <Navigator />
-      <ForceUpdateModal visible={verdict === 'force'} />
-      <SuggestUpdateBanner visible={verdict === 'suggest'} />
+      <UpdateGate
+        installed={DeviceInfo.getVersion()}
+        thresholds={{
+          force: serverConfig.min_app_version,      // installed < this → blocking modal
+          suggest: serverConfig.latest_app_version, // installed < this → dismissible banner
+        }}
+        accent="#FF6B6B"
+      />
     </>
   );
 }
 ```
 
-That's the whole integration.
+Three props. That's the whole integration. The component internally watches `AppState`,
+re-evaluates on foreground, renders the right UI for the verdict, and handles dismissal.
+
+For advanced layouts (separate themes per component, custom positioning, etc.) the
+lower-level `<ForceUpdateModal>`, `<SuggestUpdateBanner>` and `useUpdate()` exports
+remain available — see [API reference](#api) below.
 
 ---
 
