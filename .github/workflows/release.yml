@@ -22,15 +22,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          # Node 24 ships with npm 11 natively (Trusted Publishing supported).
+          # Avoids the `npm install -g npm` self-bootstrap bug seen on runners.
+          node-version: '24'
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
 
-      # Trusted Publishing requires npm >= 11.5.1. Node 22 ships with npm 10.x.
-      # Pin a specific major to avoid the @latest self-install bug
-      # (Cannot find module 'promise-retry') that hits sporadically.
-      - name: Upgrade npm
-        run: npm install -g npm@11
+      - name: Confirm npm version
+        run: npm --version
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
