@@ -2,8 +2,13 @@
 
 > Beautiful, type-safe, server-driven force/suggest update gate for React Native apps.
 
-[![npm](https://img.shields.io/npm/v/@zethictech/react-native-update-gate.svg)](https://www.npmjs.com/package/@zethictech/react-native-update-gate)
-[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@zethictech/react-native-update-gate?color=cb3837&logo=npm&label=npm)](https://www.npmjs.com/package/@zethictech/react-native-update-gate)
+[![npm downloads](https://img.shields.io/npm/dw/@zethictech/react-native-update-gate?color=cb3837&label=downloads%2Fweek)](https://www.npmjs.com/package/@zethictech/react-native-update-gate)
+[![CI](https://img.shields.io/github/actions/workflow/status/ZethicTech/react-native-update-gate/ci.yml?branch=main&label=CI&logo=github)](https://github.com/ZethicTech/react-native-update-gate/actions/workflows/ci.yml)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@zethictech/react-native-update-gate?label=minzipped)](https://bundlephobia.com/package/@zethictech/react-native-update-gate)
+[![types](https://img.shields.io/npm/types/@zethictech/react-native-update-gate?logo=typescript&logoColor=white)](https://www.npmjs.com/package/@zethictech/react-native-update-gate)
+[![license](https://img.shields.io/npm/l/@zethictech/react-native-update-gate?color=blue)](LICENSE)
+[![last commit](https://img.shields.io/github/last-commit/ZethicTech/react-native-update-gate?logo=github)](https://github.com/ZethicTech/react-native-update-gate/commits/main)
 
 Force users off broken old builds with **Google Play's native immediate flow** on Android, and a **polished animated modal** on iOS. Drive version thresholds from your own server, not from store metadata. Ship in 15 minutes.
 
