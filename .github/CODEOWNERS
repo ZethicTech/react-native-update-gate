@@ -1,0 +1,16 @@
+# Code owners — automatically requested as reviewers on PRs touching these paths.
+# https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
+
+# Workflow files — must be reviewed before merge to prevent CI/publish tampering.
+/.github/workflows/   @himanshu-zethic
+
+# Native Android module — limited surface but security-sensitive.
+/android/             @himanshu-zethic
+
+# Build / publish config.
+/package.json         @himanshu-zethic
+/tsconfig*.json       @himanshu-zethic
+/react-native-update-gate.podspec   @himanshu-zethic
+
+# Everything else — owner of last resort.
+*   @himanshu-zethic

@@ -10,6 +10,12 @@ jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
+    # Pauses at the publish step until a designated reviewer approves on GitHub.
+    # Configure reviewers + tag-pattern restriction at:
+    # https://github.com/ZethicTech/react-native-update-gate/settings/environments
+    environment:
+      name: npm-publish
+      url: https://www.npmjs.com/package/@zethictech/react-native-update-gate
     permissions:
       contents: read
       # id-token: write is the magic — lets GitHub Actions mint an OIDC token
